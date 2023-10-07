@@ -1,22 +1,22 @@
-# FB13207951
+# FB13243190
 
-Widgets process consumes most of the available memory
+Nested views wrapped in Link cause excessive CPU and memory usage
 ----
 
 **What type of feedback are you reporting?**
 Incorrect/Unexpected Behavior
 
 **Please describe the issue and what steps we can take to reproduce it:**
-Running a simple widget (from an iOS app) which only displays the entry’s date interval consumes up to 26.4MB of memory using the release configuration. 
+When multiple nested views are wrapped inside Link, it causes excessive CPU and memory usage. 
 
-Widgets have always had a 30MB memory cap which limits what developers can do with just 4MB remaining for their own work. 
+The attached sample code reproduces this issue. 
+- Open the project
+- Run the `widgetsExtension` scheme from the project as-is (pre-configured to use the Release build config)
+- Observe spike in CPU and memory usage (this causes a excessive memory usage crash in production builds)
+- Stop the run cycle
+- Comment out all `Link` declarations, leaving the `Link.Label` as-is, so the content continues to render 
+- Run the `widgetsExtension` scheme, and observe no spike in CPU or memory usage 
 
-The attached sample project demonstrates this issue: 
-1. Unzip the sample project 
-2. Open the project 
-3. Run the widget scheme (set to use the Release configuration) 
-4. Observe the memory usage 
+While the outermost `Link` should always take precedence (this behaviour is correctly observed), SwiftUI should then smartly skip evaluating inner `Link` declarations on only evaluate their labels, at-least for Widgets and complications. 
 
-The Widgets process should not consume 26 MB by itself, leaving developers with very limited memory resources to work with, before the process is killed by the OS. 
-
-Alternatively, the memory cap for for widgets should be raised, especially considering modern iOS devices have a lot more RAM to work with compared to when widgets were first released with iOS 14. 
+Built using Xcode Version 15.0 (15A240d) (also observed with XC 15.1 Beta 1) on macOS 14.0 (23A344)
