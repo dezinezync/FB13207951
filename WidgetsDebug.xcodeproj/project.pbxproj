@@ -44,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F07435F62AD0F87C00D3BFD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F0C5AF132AC3EC46000B45DA /* WidgetsDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetsDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C5AF162AC3EC46000B45DA /* WidgetsDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsDebugApp.swift; sourceTree = "<group>"; };
 		F0C5AF182AC3EC46000B45DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		F0C5AF152AC3EC46000B45DA /* WidgetsDebug */ = {
 			isa = PBXGroup;
 			children = (
+				F07435F62AD0F87C00D3BFD3 /* Info.plist */,
 				F0C5AF162AC3EC46000B45DA /* WidgetsDebugApp.swift */,
 				F0C5AF182AC3EC46000B45DA /* ContentView.swift */,
 				F0C5AF1A2AC3EC47000B45DA /* Assets.xcassets */,
@@ -393,6 +395,7 @@
 				DEVELOPMENT_TEAM = XMJKJH96ZT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetsDebug/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -423,6 +426,7 @@
 				DEVELOPMENT_TEAM = XMJKJH96ZT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetsDebug/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
